@@ -1,0 +1,17 @@
+ion-content.background {
+  --background: url(../../assets/images/pexels-photo-220201.jpg);
+  //background-position: center;
+  //background-size: cover;
+}
+
+.homeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#enterSiteBtn {
+  margin-bottom: 20%;
+}

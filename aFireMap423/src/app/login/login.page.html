@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-button color="medium" slot="end" size="small" (click)="logout()"
+      >Back
+      <ion-icon name="planet-outline"></ion-icon>
+    </ion-button>
+    <ion-title
+      >IonFireMap | WELCOME TO THE LOGIN PAGE
+      <ion-title color="light"> </ion-title>
+      <ion-title color="light"></ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="background">
+  <div class="browseContainer">
+    <div class="loginForm">
+      <h1 id="welcomeTag">Welcome || Login Or Register Below</h1>
+      <div>
+        <ion-input
+          placeholder="Type Here"
+          [(ngModel)]="email"
+          color="light"
+          required="true"
+        >
+          Email:
+        </ion-input>
+        <ion-input
+          placeholder="Type Here"
+          [(ngModel)]="password"
+          color="light"
+          required="true"
+          type="password"
+        >
+          Password:
+        </ion-input>
+
+        <ion-button (click)="login()" color="dark">
+          Login
+        </ion-button>
+        <ion-button (click)="goRegister()" color="dark">
+          Sign Up Here
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

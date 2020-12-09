@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-button color="medium" slot="end" size="small" (click)="logout()"
+      >LogOut
+      <ion-icon name="planet-outline"></ion-icon>
+    </ion-button>
+    <ion-title
+      >IonFireMap | WELCOME
+      <ion-title color="warning"> {{modelService.userAuthInfo[0]}}</ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="background">
+  <div class="browseContainer">
+    <div class="mapContainer">
+      <div id="mapId" style="height:100%; width: 100%;"></div>
+    </div>
+    <div class="blogContainer">
+      <div class="createBlogBtn">
+        <ion-button color="warning" (click)="createBlogRequest()"
+          ><ion-icon name="add-circle-outline"></ion-icon
+        ></ion-button>
+        <ion-button color="warning" (click)="refresh()"
+          ><ion-icon name="refresh-circle-outline"></ion-icon
+        ></ion-button>
+      </div>
+      <div class="innterBlogContainer">
+        <h3>Blog Timelime</h3>
+        <div
+          class="singleBlog"
+          *ngFor="let post of modelService.posts"
+          (click)="viewBlogDetails(post)"
+        >
+          <div class="indivPosts">
+            UserName: {{post.blogId}}
+            <div>
+              Blogs: {{post.blogName}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<!-- 
+<ion-content class="noScroll">
+  <div id="map"></div>
+</ion-content> -->

@@ -1,0 +1,58 @@
+ion-content.background {
+  --background: url(../../assets/images/pexels-photo-220201.jpg);
+  //background-position: center;
+  //background-size: cover;
+}
+
+.browseContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.loginForm {
+  background-color: rgba(213, 166, 112, 0.8);
+  height: 55%;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 40px #d5a670;
+  font-size: 24px;
+  text-shadow: 2px 2px 5px black;
+  padding-top: 5%;
+  text-align: center;
+}
+.loginInputItems {
+  width: 80%;
+}
+
+#welcomeTag {
+  color: #f2e0b9;
+  font-size: 40px;
+}
+
+/////media
+
+@media screen and (max-width: 768px) {
+  .loginForm {
+    background-color: #d5a670;
+    height: 55%;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 40px #d5a670;
+    font-size: 18px;
+  }
+  #welcomeTag {
+    color: #f2e0b9;
+    font-size: 25px;
+  }
+}

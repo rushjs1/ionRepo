@@ -1,0 +1,7 @@
+{
+  "name": "aFireMap423",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

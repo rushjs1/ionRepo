@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-button color="medium" slot="end" size="small" (click)="logout()"
+      >Logout
+      <ion-icon name="planet-outline"></ion-icon>
+    </ion-button>
+    <ion-button color="medium" slot="end" size="small" routerLink="/browse"
+      >Back
+      <ion-icon name="arrow-undo-circle-outline"></ion-icon>
+    </ion-button>
+    <ion-title
+      >IonFireMap | BLOG DETAILS
+      <ion-title color="warning"> {{modelService.userAuthInfo[0]}}</ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="background">
+  <div class="browseContainer">
+    <div class="mapContainer">
+      <div id="mapId4" style="height:100%; width: 100%;"></div>
+      <ion-content class="noScroll">
+        <div id="map"></div>
+      </ion-content>
+    </div>
+    <div class="blogContainer">
+      <div class="innterBlogContainer">
+        <ion-list class="inputList">
+          <div
+            class="postDetailsContainer"
+            *ngFor="let post of modelService.postDetailsArray"
+          >
+            blogId: {{post.blogId}}
+            <br />
+            BlogName: {{post.blogName}}
+            <br />
+            blogContent: {{post.blogContent}}
+            <ion-button
+              color="warning"
+              slot="end"
+              size="small"
+              (click)="editPost(post)"
+              >Edit Post Contents
+              <ion-icon name="brush-outline"></ion-icon>
+            </ion-button>
+            <ion-button
+              color="danger"
+              slot="end"
+              size="small"
+              (click)="deletePost(post)"
+              >Delete Post
+              <ion-icon name="brush-outline"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-list>
+      </div>
+      <div class="createBlogBtn">
+        <ion-button color="warning" slot="end" size="small" (click)="goBack()"
+          >Back
+          <ion-icon name="arrow-undo-circle-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

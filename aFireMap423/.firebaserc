@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "n432-data-rush": {
+      "hosting": {
+        "app": [
+          "n432-data-rush"
+        ]
+      }
+    }
+  }
+}
