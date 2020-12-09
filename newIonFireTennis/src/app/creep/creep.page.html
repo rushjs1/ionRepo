@@ -1,0 +1,72 @@
+<ion-header>
+  <div class="header">
+    <ion-toolbar color="tennisnavy">
+      <ion-button
+        color="tennisyellow"
+        slot="start"
+        size="small"
+        routerLink="/browse"
+        >Back
+        <ion-icon name="arrow-undo-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button
+        color="tennisyellow"
+        slot="end"
+        size="small"
+        (click)="logout()"
+        >Logout
+        <ion-icon name="planet-outline"></ion-icon>
+      </ion-button>
+      <ion-title>
+        <ion-title color="tennisyellow">
+          {{modelService.userAuthInfo[0]}}
+        </ion-title>
+      </ion-title>
+    </ion-toolbar>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div id="contentContainer">
+    <h2>
+      Their Profile!
+    </h2>
+
+    <br />
+
+    <img src="{{modelService.creepDetailsArray[0].profilePic}}" />
+
+    <br />
+    <div class="infoTextContainer">
+      <h4>
+        UserName:
+      </h4>
+      <h5>{{modelService.creepDetailsArray[0].userName}}</h5>
+      <h4>
+        Email:
+      </h4>
+      <h5>{{modelService.creepDetailsArray[0].email}}</h5>
+      <h4>
+        UiD:
+      </h4>
+      <h5>{{modelService.creepDetailsArray[0].uid}}</h5>
+      <h4>
+        Looking To Play:
+      </h4>
+      <h5>{{modelService.creepDetailsArray[0].lookingToPlay}}</h5>
+      <h4>
+        Player Description:
+      </h4>
+      <h5>{{modelService.creepDetailsArray[0].profileDescription}}</h5>
+    </div>
+
+    <!-- 
+        <div *ngFor="let accounts of modelService.accountsArray">
+          <div>
+            User Email: {{accounts.email}}, Favorite Shots: {{accounts.shots}}
+            <img src="imgUrl" />
+          </div>
+        
+        </div> -->
+  </div>
+</ion-content>

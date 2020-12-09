@@ -1,0 +1,74 @@
+<ion-header>
+  <div class="header">
+    <ion-toolbar color="tennisnavy">
+      <ion-button
+        color="tennisyellow"
+        slot="end"
+        size="small"
+        (click)="logout()"
+        >Logout
+        <ion-icon name="planet-outline"></ion-icon>
+      </ion-button>
+      <ion-title>
+        <ion-title color="tennisyellow">
+          {{modelService.userAuthInfo[0]}}
+        </ion-title>
+      </ion-title>
+    </ion-toolbar>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div id="contentContainer">
+    <ion-list>
+      <ion-item>
+        <div class="nextImgTextWrapper">
+          <h2>
+            Lets Upload A Profile Photo.
+          </h2>
+          <p>No need to feel Shy!!</p>
+          <input
+            type="file"
+            (change)="onSelect($event)"
+            class="filebtn"
+            #fileButton
+          />
+          <ion-button
+            shape="round"
+            color="tennisnavy"
+            fill="outline"
+            (click)="uploadFile()"
+            >Select Profile Photo</ion-button
+          >
+        </div>
+      </ion-item>
+      <ion-item>
+        <h2>
+          Enter Your Display Name.
+        </h2>
+        <p>This will be the name users will see your profile as.</p>
+        <ion-label color="tennisyellow" position="floating"
+          >Type Here</ion-label
+        >
+        <ion-input
+          type="text"
+          [(ngModel)]="desiredDisplayName"
+          color="tennisnavy"
+          placeholder="John"
+        ></ion-input>
+        <ion-button color="tennisnavy" (click)="submitDisplayName()">
+          Submit
+        </ion-button>
+      </ion-item>
+    </ion-list>
+
+    <!-- 
+      <div *ngFor="let accounts of modelService.accountsArray">
+        <div>
+          User Email: {{accounts.email}}, Favorite Shots: {{accounts.shots}}
+          <img src="imgUrl" />
+        </div>
+      
+      </div> -->
+  </div>
+</ion-content>

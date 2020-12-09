@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="tennisnavy">
+    <ion-button color="tennisyellow" slot="start" routerLink="/home"
+      >Back
+      <ion-icon name="planet-outline"></ion-icon>
+    </ion-button>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="regBackG">
+    <ion-list>
+      <ion-item>
+        <p>Sign up below to start connecting with other players today!</p>
+        <ion-label color="tennisnavy" position="floating">Email </ion-label>
+        <ion-input type="text" [(ngModel)]="email"> </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="tennisnavy" position="floating">Password </ion-label>
+        <ion-input type="password" [(ngModel)]="password"> </ion-input>
+      </ion-item>
+      <ion-button
+        fill="solid"
+        expand="block"
+        color="tennisyellow"
+        (click)="register()"
+        >Submit</ion-button
+      >
+    </ion-list>
+  </div>
+</ion-content>

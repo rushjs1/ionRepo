@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ionfiretennis"
+  },
+  "targets": {
+    "ionfiretennis": {
+      "hosting": {
+        "app": [
+          "ionfiretennis"
+        ]
+      }
+    }
+  }
+}

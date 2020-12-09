@@ -1,0 +1,89 @@
+<ion-header>
+  <div class="header">
+    <ion-toolbar color="tennisnavy">
+      <ion-button
+        color="tennisyellow"
+        slot="end"
+        size="small"
+        (click)="logout()"
+        >Logout
+        <ion-icon name="planet-outline"></ion-icon>
+      </ion-button>
+      <ion-title>
+        <ion-title color="tennisyellow">
+          {{modelService.userAuthInfo[0]}}
+        </ion-title>
+      </ion-title>
+    </ion-toolbar>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div id="contentContainer">
+    <ion-list>
+      <ion-item>
+        <div class="nextImgTextWrapper">
+          <h2>
+            Are You Looking To Play Singles or Doubles?
+          </h2>
+        </div>
+      </ion-item>
+      <ion-radio-group value="biff" name="lookingModePref">
+        <ion-item>
+          <ion-item>
+            <ion-label>Notes</ion-label>
+            <ion-textarea
+              rows="6"
+              cols="20"
+              placeholder="Write a Profile Description Here!! You're the only you, tell us why 😎 ..."
+              [(ngModel)]="profileDescription"
+            ></ion-textarea>
+          </ion-item>
+        </ion-item>
+        <ion-item> </ion-item>
+        <ion-list-header>
+          <ion-label color="tennisyellow">Preference: </ion-label>
+        </ion-list-header>
+
+        <ion-item color="tennisnavy" expand="block">
+          <ion-label color="light">Singles</ion-label>
+          <ion-radio
+            color="tennisyellow"
+            slot="start"
+            value="singles"
+            (click)="singles()"
+          ></ion-radio>
+        </ion-item>
+
+        <ion-item color="tennisnavy">
+          <ion-label color="light">Doubles</ion-label>
+          <ion-radio
+            color="tennisyellow"
+            slot="start"
+            value="doubles"
+            (click)="doubles()"
+          ></ion-radio>
+        </ion-item>
+
+        <ion-item color="tennisnavy">
+          <ion-label color="light">Both</ion-label>
+          <ion-radio
+            color="tennisyellow"
+            slot="start"
+            value="both"
+            (click)="both()"
+          ></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+    <!-- 
+        <div *ngFor="let accounts of modelService.accountsArray">
+          <div>
+            User Email: {{accounts.email}}, Favorite Shots: {{accounts.shots}}
+            <img src="imgUrl" />
+          </div>
+        
+        </div> -->
+  </div>
+</ion-content>

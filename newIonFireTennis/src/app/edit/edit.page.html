@@ -1,0 +1,141 @@
+<ion-header>
+  <div class="header">
+    <ion-toolbar color="tennisnavy">
+      <ion-button
+        color="tennisyellow"
+        slot="start"
+        size="small"
+        (click)="goBrowse()"
+        >Back
+        <ion-icon name="arrow-undo-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button
+        color="tennisyellow"
+        slot="end"
+        size="small"
+        (click)="logout()"
+        >Logout
+        <ion-icon name="planet-outline"></ion-icon>
+      </ion-button>
+      <ion-title>
+        <ion-title color="tennisyellow">
+          {{modelService.userAuthInfo[0]}}
+        </ion-title>
+      </ion-title>
+    </ion-toolbar>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div id="contentContainer">
+    <h2>
+      Your Profile!
+    </h2>
+
+    <br />
+
+    <img src="{{modelService.user.photoURL}}" />
+    <ion-item>
+      <input
+        type="file"
+        (change)="onSelect($event)"
+        class="updateImgBtn"
+        #fileButton
+      />
+
+      <!--      <ion-button
+        shape="round"
+        color="tennisnavy"
+        fill="outline"
+        (click)="uploadFile()"
+        >Select Profile Photo
+      </ion-button> -->
+    </ion-item>
+
+    <br />
+
+    <div class="textWrapper">
+      <p>
+        Name:
+      </p>
+      {{modelService.user.displayName}} <br />
+      <ion-item>
+        <ion-label color="tennisyellow" position="floating"
+          >Type Display name Here</ion-label
+        >
+        <br />
+
+        <ion-input
+          type="text"
+          [(ngModel)]="desiredUpdatedDisplayName"
+          color="tennisnavy"
+          placeholder="Michael"
+        ></ion-input>
+      </ion-item>
+      <p>
+        ProfileDescription:
+      </p>
+      {{modelService.indivFireData.profileDescription}}
+      <ion-item>
+        <ion-label color="tennisyellow" position="floating"
+          >Type a new Description Here</ion-label
+        >
+        <br />
+        <ion-input
+          type="text"
+          [(ngModel)]="desiredUpdatedDescription"
+          color="tennisnavy"
+          placeholder="I Love Tennis!!"
+        ></ion-input>
+      </ion-item>
+      <p>
+        Looking To Play:
+      </p>
+      {{modelService.indivFireData.lookingToPlay}}
+      <ion-item>
+        <ion-label color="tennisyellow" position="floating"
+          >Singles? Doubles? Both?... Pickel!??</ion-label
+        >
+        <br />
+
+        <ion-input
+          type="text"
+          [(ngModel)]="desiredUpdatedLooking"
+          color="tennisnavy"
+          placeholder="Doubles"
+        ></ion-input>
+      </ion-item>
+      <p>
+        Email:
+      </p>
+      {{modelService.user.email}} <br />
+      <p>UiD:</p>
+      {{modelService.user.uid}}
+      <br />
+      <p>
+        Verified:
+      </p>
+      {{modelService.user.emailVerified}}
+      <br />
+      <p>
+        Last Login:
+      </p>
+      {{modelService.user.metadata.lastSignInTime}}
+      <ion-button color="tennisnavy" (click)="goBrowse">
+        Back
+      </ion-button>
+      <ion-button color="tennisyellow" (click)="submitChangesToProfile()">
+        Submit Changes
+      </ion-button>
+    </div>
+
+    <!-- 
+        <div *ngFor="let accounts of modelService.accountsArray">
+          <div>
+            User Email: {{accounts.email}}, Favorite Shots: {{accounts.shots}}
+            <img src="imgUrl" />
+          </div>
+        
+        </div> -->
+  </div>
+</ion-content>

@@ -1,0 +1,56 @@
+<ion-header>
+  <div class="header">
+    <ion-toolbar color="tennisnavy">
+      <ion-button
+        color="tennisyellow"
+        slot="start"
+        size="small"
+        (click)="goProfile()"
+      >
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button
+        color="tennisyellow"
+        slot="end"
+        size="small"
+        (click)="logout()"
+        >Logout
+        <ion-icon name="planet-outline"></ion-icon>
+      </ion-button>
+
+      <ion-title>
+        <ion-title color="tennisyellow">
+          {{modelService.userAuthInfo[0]}}
+        </ion-title>
+      </ion-title>
+    </ion-toolbar>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div id="contentContainer">
+    <h2>
+      Happy Connecting!
+    </h2>
+
+    <div class="profiles">
+      <div
+        *ngFor="let account of modelService.accountsArray"
+        (click)="creepUser(account)"
+      >
+        <div class="indivProfile">
+          UserName: {{account.userName}}
+          <img src="{{account.profilePic}}" />
+        </div>
+      </div>
+    </div>
+    <!-- 
+    <div *ngFor="let accounts of modelService.accountsArray">
+      <div>
+        User Email: {{accounts.email}}, Favorite Shots: {{accounts.shots}}
+        <img src="imgUrl" />
+      </div>
+    
+    </div> -->
+  </div>
+</ion-content>

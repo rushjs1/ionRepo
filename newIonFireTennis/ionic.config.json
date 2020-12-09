@@ -1,0 +1,7 @@
+{
+  "name": "newIonFireTennis",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
