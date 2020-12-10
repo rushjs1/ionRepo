@@ -1,0 +1,41 @@
+.ion-color-newtan {
+  --ion-color-base: var(--ion-color-newtan);
+  --ion-color-base-rgb: var(--ion-color-newtan-rgb);
+  --ion-color-contrast: var(--ion-color-newtan-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-newtan-contrast-rgb);
+  --ion-color-shade: var(--ion-color-newtan-shade);
+  --ion-color-tint: var(--ion-color-newtan-tint);
+}
+
+.contentContainer {
+  height: 100%;
+  width: 100%;
+  color: var(--ion-color-newtan);
+}
+.butCont {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.newHomeCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.homeContainer {
+  width: 30%;
+}
+
+@media only screen and (max-width: 850px) {
+  .homeContainer {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .homeContainer {
+    width: 50%;
+  }
+}

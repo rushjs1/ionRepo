@@ -1,0 +1,7 @@
+{
+  "name": "ionPortfolio",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

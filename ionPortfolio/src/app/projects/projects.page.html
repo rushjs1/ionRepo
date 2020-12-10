@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-button color="light" class="backBtn" routerLink="/home" slot="start">
+      Back <ion-icon name="arrow-undo-circle-outline"></ion-icon>
+    </ion-button>
+    <ion-title color="dark">Projects</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="projCont">
+    <ion-card
+      href="https://www.getloke.com/skate-spots"
+      color="light"
+      (click)="alertThis()"
+    >
+      <div class="imgCont">
+        <img
+          src="../../assets/images/Screen Shot 2020-12-09 at 4.35.13 PM.png"
+        />
+      </div>
+      <ion-card-header>
+        <ion-card-subtitle>Project 1</ion-card-subtitle>
+        <ion-card-title>Loke Skateboarding Spot App</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Increased application scalability by completing geoJson data conversion,
+        and implemented mapbox spotclustering for over 18,000 skate spots
+        accross the globe. Additionally, worked to implement a SVG Animation for
+        a loading indicator.
+      </ion-card-content>
+    </ion-card>
+    <ion-card
+      href="https://in-info-web4.informatics.iupui.edu/~rushjs/ionFireMap/"
+      color="light"
+    >
+      <img src="../../assets/images/Screen Shot 2020-12-09 at 5.54.49 PM.png" />
+      <ion-card-header>
+        <ion-card-subtitle>Project 2</ion-card-subtitle>
+        <ion-card-title>ionFireMap</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Ionic 5 Angular, leaflet blog inspired CRUD application. Firebase
+        Authentication along with firestore nested collections.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card
+      href="https://in-info-web4.informatics.iupui.edu/~rushjs/ionFireTennis/"
+      color="light"
+    >
+      <img src="../../assets/images/Screen Shot 2020-12-09 at 5.50.02 PM.png" />
+      <ion-card-header>
+        <ion-card-subtitle>Project 3</ion-card-subtitle>
+        <ion-card-title>ionFireTennis</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Ionic 5 Angular tennis inspired social media application. Firebase
+        Authentication, Firestore and Firestorage.
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

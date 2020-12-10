@@ -1,0 +1,67 @@
+.ion-color-newtan {
+  --ion-color-base: var(--ion-color-newtan);
+  --ion-color-base-rgb: var(--ion-color-newtan-rgb);
+  --ion-color-contrast: var(--ion-color-newtan-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-newtan-contrast-rgb);
+  --ion-color-shade: var(--ion-color-newtan-shade);
+  --ion-color-tint: var(--ion-color-newtan-tint);
+}
+.ion-color-black {
+  --ion-color-base: var(--ion-color-black);
+  --ion-color-base-rgb: var(--ion-color-black-rgb);
+  --ion-color-contrast: var(--ion-color-black-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-black-contrast-rgb);
+  --ion-color-shade: var(--ion-color-black-shade);
+  --ion-color-tint: var(--ion-color-black-tint);
+}
+
+.backBtn {
+  /* --border-color: var(--ion-color-newtan-contrast); */
+  --border-color: var(--ion-color-black);
+}
+
+.imgCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projCont {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+
+  flex-direction: row;
+  margin-left: 4.5%;
+}
+@media only screen and (max-width: 1070px) {
+  .projCont {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 4.5%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .projCont {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 32%;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .projCont {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 10%;
+  }
+}
