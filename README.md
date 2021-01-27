@@ -2,7 +2,7 @@
  
 Ionic 4 Angular Applications 
 
-Profile Social Media based application, intended for finding tennis partners close in geolocation as well as interests.
+Profile Social Media based application, intended for finding tennis partners close in geolocation as well as interests/ player attributes and also the players USTA Rating.
 https://in-info-web4.informatics.iupui.edu/~rushjs/ionFireTennis/
 	
 	
