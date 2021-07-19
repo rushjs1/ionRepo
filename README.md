@@ -14,5 +14,5 @@ https://whispering-harbor-08664.herokuapp.com/
 	
 	
 	
-Mapilariy Social media based blog application. Inteded to only show blogs or posts on a map from people around you.
+Geolocation Social media based blog application. Inteded to only show blogs or posts on a map from people around you.
 https://n432-data-rush.web.app/
